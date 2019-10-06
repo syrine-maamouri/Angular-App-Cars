@@ -1,0 +1,12 @@
+<h1>Result of Challange Cars</h1>
+<ul *ngIf="data">
+  <li *ngFor=" let car of data.MRData.RaceTable.Races[0].Results">
+      <p class="name"> {{car.Driver.givenName}} {{ car.Driver.familyName }}</p>
+      <p class="name">{{car.Driver.dateOfBirth}}</p>
+      <p class="contry">{{car.Constructor.constructorId}}</p>
+      <p class="contry">{{car.Driver.nationality}}</p>
+      <a class="site" href="{{car.Constructor.url}}">Site Web</a>
+  </li>
+
+</ul>
+
